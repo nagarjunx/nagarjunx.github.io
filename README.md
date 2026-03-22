@@ -5,7 +5,7 @@
 **Performance Engineer**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?logo=github)](https://github.com/nagarjunas-ai)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?logo=github)](https://github.com/nagarjunx)
 </div>
 
 ---
@@ -56,7 +56,7 @@ Executed end-to-end performance testing, developed JMeter scripts, and collabora
 ### 1. JTL Converter
 A custom Python automation utility designed to help performance engineers in their day-to-day activities by converting and analyzing JMeter JTL files efficiently.
 * **Tech:** Python, Automation, JMeter, Data Processing
-* **Demo:** [JTL Converter on Render](https://jtl-converter.onrender.com/) | **Source:** [GitHub](https://github.com/nagarjunas-ai/jtl_converter)
+* **Demo:** [JTL Converter on Render](https://jtl-converter.onrender.com/) | **Source:** [GitHub](https://github.com/nagarjunx/jtl_converter)
 
 ### 2. Personal Finance Management (PFM) Load Testing
 Led performance testing for Yodlee Retail Banking Solutions, securely aggregating data from 14,000+ sources. Created test plans, reviewed complex SQL queries, and generated performance scorecards using **JMeter** and **Zabbix**.
