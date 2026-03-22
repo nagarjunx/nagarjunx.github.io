@@ -402,7 +402,7 @@ const TerminalSection = () => {
         response = 'JMeter, LoadRunner, Zabbix, New Relic, Python, Powershell, Bash, Pywinauto, AWS Kubernetes, Docker, Linux, Oracle SQL, Java.';
         break;
       case 'experience':
-        response = 'MTS-Performance Engineer @ Athenahealth | IT Analyst @ TCS | Senior Associate @ Wipro.';
+        response = 'MTS-Performance Engineer @ Athenahealth | IT Analyst-Performance Engineer @ TCS | Senior Associate-Performance Engineer @ Wipro.';
         break;
       case 'contact':
         response = 'Email: nagarjun835@gmail.com | LinkedIn: linkedin.com/in/nagarjuna835 | Phone: 8971151169';

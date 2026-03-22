@@ -22,10 +22,10 @@ Whether I'm scripting intricate scenarios in JMeter, deep-diving into New Relic 
 ### **Athenahealth** | *MTS-Performance Engineer* (Present)
 Specializing in test planning, advanced scripting, and bottleneck analysis to ensure systems deliver peak reliability and scalability in the Healthcare domain.
 
-### **Tata Consultancy Services** | *IT Analyst* (2023 - 2024)
+### **Tata Consultancy Services** | *Performance Engineer* (2023 - 2024)
 Leading performance engineering initiatives, optimizing client/server and web-based applications for high availability and scalability.
 
-### **Wipro Limited** | *Senior Associate* (2020 - 2023)
+### **Wipro Limited** | *Performance Engineer* (2020 - 2023)
 Executed end-to-end performance testing, developed JMeter scripts, and collaborated with DBAs to resolve system bottlenecks.
 
 ---

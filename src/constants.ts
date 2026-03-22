@@ -50,13 +50,13 @@ export const EXPERIENCE = [
     description: 'Specializing in test planning, advanced scripting, and bottleneck analysis to ensure systems deliver peak reliability and scalability in the Healthcare domain.'
   },
   {
-    role: 'IT Analyst',
+    role: 'IT Analyst-Performance Engineer',
     company: 'Tata Consultancy Services',
     period: '2023 - 2024',
     description: 'Leading performance engineering initiatives, optimizing client/server and web-based applications for high availability and scalability.'
   },
   {
-    role: 'Senior Associate',
+    role: 'Senior Associate-Performance Engineer',
     company: 'Wipro Limited',
     period: '2020 - 2023',
     description: 'Executed end-to-end performance testing, developed JMeter scripts, and collaborated with DBAs to resolve system bottlenecks.'
@@ -91,8 +91,8 @@ export const PROJECTS = [
 ];
 
 export const STATS = [
-  { label: 'SYSTEM RUNTIME', value: '5+ YRS', icon: Terminal },
-  { label: 'PEAK_LOAD_CAPACITY', value: '4K+', icon: Activity },
+  { label: 'Experience in Performance Engineering', value: '5+ YRS', icon: Terminal },
+  { label: 'Concurrent Users Tested / Peak Load Handled', value: '4K+', icon: Activity },
   { label: 'AUTOMATION_COVERAGE', value: '90%', icon: Cpu },
-  { label: 'P95_LATENCY_GOAL', value: '<200ms', icon: Zap },
+  { label: 'Bottlenecks Identified Pre-Production', value: '95%+ Issues', icon: Zap },
 ];
