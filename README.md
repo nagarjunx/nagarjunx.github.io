@@ -1,5 +1,5 @@
 <div align="center">
-![alt text](image.png)
+<img src="image.png" alt="Portfolio Screenshot" width="800" />
 
 # ⚡ Nagarjuna S
 **Performance Engineer**
