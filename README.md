@@ -1,108 +1,71 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+![alt text](image.png)
 
-# [PERF_STATION] : Nagarjuna S Portfolio
+# ⚡ Nagarjuna S
+**Performance Engineer**
 
-**Performance Engineer | Automation Architect | Reliability Expert**
-
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?logo=github)](https://github.com/nagarjunas-ai)
 </div>
 
 ---
 
-## 🚀 Overview
+## 🚀 About Me
 
-Welcome to the **Performance Station**, a futuristic, high-performance personal portfolio designed for **Nagarjuna S**. This project showcases 5+ years of expertise in performance engineering across Banking and Healthcare sectors. 
+I believe that **"fast" is a feature**. With 5+ years of experience across the high-stakes sectors of Banking and Healthcare, I currently ensure **Athenahealth** systems remain resilient and scalable. I don't just execute tests; I architect performance ecosystems.
 
-The application features a cyberpunk-inspired **"Nexus" aesthetic**, real-time simulated performance telemetry, and interactive system components.
+Whether I'm scripting intricate scenarios in JMeter, deep-diving into New Relic telemetry to isolate bottlenecks, or deploying Python-driven automation to eliminate manual overhead, my objective is singular: **Peak Reliability**. I thrive at the intersection of performance engineering, proactive monitoring, and intelligent automation.
 
-## ✨ Key Features
+---
 
-- **Cyberpunk UI:** High-contrast, neon-green "Nexus" theme with scanline effects and glassmorphism.
-- **Performance Telemetry:** Real-time animated area charts using **Recharts** to simulate system monitoring.
-- **Interactive Terminal:** A functional command-line interface simulator to explore project details and contact information.
-- **Project Showcase:** Detailed cards for automation tools (like the JTL Converter) and enterprise load simulation projects.
-- **Technical Arsenal:** A categorized breakdown of skills in Performance Testing, Automation, Monitoring, and Infrastructure.
-- **Smooth Animations:** Integrated entrance and hover effects powered by **Framer Motion**.
+## 💼 Professional Experience
 
-## 🛠️ Technology Stack
+### **Athenahealth** | *MTS-Performance Engineer* (Present)
+Specializing in test planning, advanced scripting, and bottleneck analysis to ensure systems deliver peak reliability and scalability in the Healthcare domain.
 
-- **Frontend:** React 19 (Functional Components, Hooks)
-- **Build System:** Vite 6
-- **Styling:** Tailwind CSS 4 (Utility-first with CSS-based theme variables)
-- **Animations:** Framer Motion (`motion/react`)
-- **Icons:** Lucide React
-- **Charts:** Recharts
-- **Typing:** TypeScript
-- **Utilities:** `clsx`, `tailwind-merge`
+### **Tata Consultancy Services** | *IT Analyst* (2023 - 2024)
+Leading performance engineering initiatives, optimizing client/server and web-based applications for high availability and scalability.
 
-## 📂 Project Structure
+### **Wipro Limited** | *Senior Associate* (2020 - 2023)
+Executed end-to-end performance testing, developed JMeter scripts, and collaborated with DBAs to resolve system bottlenecks.
 
-```text
-├── src/
-│   ├── App.tsx          # Main layout and section orchestration
-│   ├── constants.ts     # Centralized data store (Content, Skills, Projects)
-│   ├── index.css        # Tailwind 4 theme and global animations
-│   ├── main.tsx         # React entry point
-│   └── lib/
-│       └── utils.ts     # Styling utility functions
-├── public/              # Static assets
-├── index.html           # HTML template
-└── vite.config.ts       # Vite configuration
-```
+---
 
-## ⚙️ Getting Started
+## 🛠️ Technical Arsenal
 
-### Prerequisites
+### 🔬 Performance Testing
+**Apache JMeter**, **HP LoadRunner**
+*Designing and executing high-concurrency load, stress, and endurance tests.*
 
-- [Node.js](https://nodejs.org/) (Latest LTS recommended)
+### ⚡ Automation & Scripting
+**Python**, **Bash**, **PowerShell**, **Pywinauto**, **Java**
+*Building custom utilities to eliminate manual effort and accelerate analysis.*
 
-### Installation
+### 📊 Monitoring & APM
+**New Relic**, **Zabbix**, **JProfiler**
+*Deep-dive bottleneck analysis and real-time system telemetry.*
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd nagarjuna
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
+### ☁️ Infrastructure & Data
+**AWS**, **Kubernetes**, **Docker**, **Linux**, **Oracle SQL**
+*Navigating complex distributed systems and analyzing database performance.*
 
-### Development
+---
 
-Run the development server:
-```bash
-npm run dev
-```
-The app will be available at `http://localhost:3000`.
+## 💻 Featured Projects & Automation
 
-### Production
+### 1. JTL Converter
+A custom Python automation utility designed to help performance engineers in their day-to-day activities by converting and analyzing JMeter JTL files efficiently.
+* **Tech:** Python, Automation, JMeter, Data Processing
+* **Demo:** [JTL Converter on Render](https://jtl-converter.onrender.com/) | **Source:** [GitHub](https://github.com/nagarjunas-ai/jtl_converter)
 
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-2. Preview the production build:
-   ```bash
-   npm run preview
-   ```
+### 2. Personal Finance Management (PFM) Load Testing
+Led performance testing for Yodlee Retail Banking Solutions, securely aggregating data from 14,000+ sources. Created test plans, reviewed complex SQL queries, and generated performance scorecards using **JMeter** and **Zabbix**.
 
-## 📝 Development Notes
-
-- **Content Management:** To update text, projects, or skills, modify `src/constants.ts`.
-- **Theme Customization:** Global colors and font settings are defined in `src/index.css` under the `@theme` block.
-- **Linting:** Run `npm run lint` to perform TypeScript type checking.
+### 3. Enterprise Load Simulation Framework
+Developed robust scripts in Apache JMeter and LoadRunner to emulate realistic user behavior for high-concurrency load, stress, and endurance testing across enterprise applications.
 
 ---
 
 <div align="center">
-Built with ❤️ for High-Performance Engineering.
+<i>Driven by Data. Focused on Reliability. Crafted with Automation.</i>
 </div>
