@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ResponsiveContainer, 
-  Tooltip, 
-  AreaChart, 
-  Area 
+import {
+  ResponsiveContainer,
+  Tooltip,
+  AreaChart,
+  Area
 } from 'recharts';
 import { motion } from 'motion/react';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
+import {
+  Github,
+  Linkedin,
+  Mail,
   Zap,
   ChevronRight,
   ExternalLink,
@@ -35,7 +35,7 @@ const Header = () => {
       scrolled ? "bg-nexus-bg/80 backdrop-blur-lg border-nexus-accent/20 py-3" : "bg-transparent border-transparent py-6"
     )}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+        <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
           <div className="w-8 h-8 bg-nexus-accent rounded-sm flex items-center justify-center group-hover:rotate-90 transition-transform duration-500">
             <Zap className="w-5 h-5 text-nexus-bg fill-current" />
           </div>
@@ -44,8 +44,8 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
               className="font-mono text-xs tracking-widest text-nexus-text/60 hover:text-nexus-accent transition-colors relative group"
             >
@@ -59,7 +59,7 @@ const Header = () => {
           <button onClick={() => window.open('https://www.linkedin.com/in/nagarjuna835', '_blank')} className="p-2 glass-card hover:bg-nexus-accent/10 transition-colors">
             <Linkedin className="w-4 h-4" />
           </button>
-          <button onClick={() => window.location.href='mailto:nagarjun835@gmail.com'} className="px-4 py-2 bg-nexus-accent text-nexus-bg font-mono text-xs font-bold rounded-sm hover:brightness-110 transition-all">
+          <button onClick={() => window.location.href = 'mailto:nagarjun835@gmail.com'} className="px-4 py-2 bg-nexus-accent text-nexus-bg font-mono text-xs font-bold rounded-sm hover:brightness-110 transition-all">
             CONNECT_
           </button>
         </div>
@@ -89,22 +89,22 @@ const PerformanceChart = () => {
         <AreaChart data={data}>
           <defs>
             <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#00FF9C" stopOpacity={0.3}/>
-              <stop offset="95%" stopColor="#00FF9C" stopOpacity={0}/>
+              <stop offset="5%" stopColor="#00FF9C" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="#00FF9C" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <Tooltip 
+          <Tooltip
             contentStyle={{ backgroundColor: '#050505', border: '1px solid #00FF9C', borderRadius: '4px' }}
             itemStyle={{ color: '#00FF9C', fontSize: '10px', fontFamily: 'monospace' }}
             labelStyle={{ display: 'none' }}
           />
-          <Area 
-            type="monotone" 
-            dataKey="value" 
-            stroke="#00FF9C" 
+          <Area
+            type="monotone"
+            dataKey="value"
+            stroke="#00FF9C"
             strokeWidth={2}
-            fillOpacity={1} 
-            fill="url(#colorValue)" 
+            fillOpacity={1}
+            fill="url(#colorValue)"
             isAnimationActive={false}
           />
         </AreaChart>
@@ -118,7 +118,7 @@ const Hero = () => {
     <section id="system" className="min-h-screen pt-32 pb-20 flex flex-col justify-center relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -131,36 +131,36 @@ const Hero = () => {
             <span className="text-[10px] font-mono text-nexus-text/40 tracking-widest uppercase">Uptime: 99.99%</span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-8xl font-bold tracking-tighter leading-none mb-4"
+            className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight mb-8"
           >
-            NAGARJUNA S
+            Hi, I'm Nagarjuna <span className="inline-block hover:rotate-12 transition-transform cursor-default">👋</span>
           </motion.h1>
-          
-          <motion.h2
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl md:text-4xl font-mono text-nexus-accent nexus-glow mb-8"
-          >
-            PERFORMANCE ENGINEER
-          </motion.h2>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-nexus-text/60 text-lg md:text-xl max-w-3xl font-light leading-relaxed mb-10"
+            className="text-nexus-text text-xl md:text-2xl max-w-3xl font-bold leading-relaxed mb-6"
           >
-            I believe that "fast" is a feature. With 5+ years of experience across the high-stakes sectors of Banking and Healthcare, I currently ensure athenahealth systems remain resilient and scalable. I don't just execute tests; I architect performance ecosystems.
-            <br /><br />
-            Whether I’m scripting intricate scenarios in JMeter, deep-diving into New Relic telemetry to isolate bottlenecks, or deploying Python-driven automation to eliminate the manual overhead, my objective is singular: Peak Reliability. I thrive at the intersection of performance engineering, proactive monitoring, and intelligent automation.
+            Performance Engineer | Optimizing systems. Building intelligent tools.
           </motion.p>
 
-          <motion.div 
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-nexus-text/60 text-lg md:text-lg max-w-3xl font-light leading-relaxed mb-10"
+          >
+            With 5+ years of experience across banking and healthcare, I specialize in identifying bottlenecks, optimizing system behavior, and ensuring reliability at scale.
+            <br /><br />
+            I design performance strategies, analyze system metrics, and build automation to eliminate manual effort, accelerate analysis, and detect performance issues faster.
+          </motion.p>
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -175,7 +175,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      
+
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 hidden lg:block">
         <PerformanceChart />
       </div>
@@ -224,7 +224,7 @@ const Telemetry = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {STATS.map((stat, idx) => (
-            <motion.div 
+            <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ const Telemetry = () => {
             >
               {/* Scanline background */}
               <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.25)_50%)] bg-[length:100%_4px] opacity-20 group-hover:opacity-40 transition-opacity pointer-events-none" />
-              
+
               {/* Top accent line */}
               <div className="absolute top-0 left-0 w-full h-[2px] bg-nexus-accent/20 group-hover:bg-nexus-accent transition-colors duration-300" />
 
@@ -246,7 +246,7 @@ const Telemetry = () => {
                   </div>
                   <span className="text-[10px] font-mono text-nexus-text/30 tracking-widest">SYS.0{idx + 1}</span>
                 </div>
-                
+
                 <div>
                   <div className="text-4xl font-mono font-bold text-white mb-2 tracking-tight group-hover:text-nexus-accent transition-colors duration-300">{stat.value}</div>
                   <div className="text-[10px] font-mono text-nexus-text/40 tracking-widest uppercase flex items-center gap-2">
@@ -277,7 +277,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {PROJECTS.map((project, idx) => (
-            <motion.div 
+            <motion.div
               key={project.title}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -288,7 +288,7 @@ const Projects = () => {
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
                 <Code2 className="w-12 h-12" />
               </div>
-              
+
               <h3 className="text-2xl font-bold mb-4 group-hover:text-nexus-accent transition-colors">{project.title}</h3>
               <p className="text-nexus-text/60 text-sm mb-8 leading-relaxed flex-grow">
                 {project.description}
@@ -345,7 +345,7 @@ const Resources = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {SKILL_CATEGORIES.map((category, idx) => (
-            <motion.div 
+            <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -391,7 +391,7 @@ const TerminalSection = () => {
     const cmd = input.toLowerCase().trim();
     let response = '';
 
-    switch(cmd) {
+    switch (cmd) {
       case 'help':
         response = 'Available commands: about, skills, experience, contact, clear, status';
         break;
@@ -441,8 +441,8 @@ const TerminalSection = () => {
               ))}
               <form onSubmit={handleCommand} className="flex items-center gap-2 pt-2">
                 <span className="text-nexus-accent">nagarjuna@system:~$</span>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   className="bg-transparent border-none outline-none flex-grow text-nexus-text"
@@ -483,7 +483,7 @@ const Footer = () => {
 
           <div className="text-right hidden md:block">
             <div className="text-[10px] font-mono text-nexus-text/30 uppercase tracking-widest mb-2">Location</div>
-            <div className="text-sm font-mono">MYSURU, KARNATAKA</div>
+            <div className="text-sm font-mono">INDIA</div>
           </div>
         </div>
       </div>
@@ -497,9 +497,9 @@ export default function App() {
   return (
     <div className="relative">
       <div className="scanline" />
-      
+
       <Header />
-      
+
       <main>
         <Hero />
         <Experience />
