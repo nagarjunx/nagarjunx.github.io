@@ -1,34 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  LineChart, 
-  Line, 
   ResponsiveContainer, 
-  YAxis, 
   Tooltip, 
   AreaChart, 
   Area 
 } from 'recharts';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { 
-  Activity, 
-  Cpu, 
-  Database, 
   Github, 
-  Globe, 
-  Layers, 
   Linkedin, 
   Mail, 
-  Maximize2, 
-  Monitor, 
-  Server, 
-  Terminal, 
   Zap,
   ChevronRight,
   ExternalLink,
   Code2
 } from 'lucide-react';
 import { cn } from './lib/utils';
-import { NAV_LINKS, SKILLS, PROJECTS, STATS, EXPERIENCE } from './constants';
+import { NAV_LINKS, SKILL_CATEGORIES, PROJECTS, STATS, EXPERIENCE } from './constants';
 
 // --- Components ---
 
@@ -51,7 +39,7 @@ const Header = () => {
           <div className="w-8 h-8 bg-nexus-accent rounded-sm flex items-center justify-center group-hover:rotate-90 transition-transform duration-500">
             <Zap className="w-5 h-5 text-nexus-bg fill-current" />
           </div>
-          <span className="font-mono font-bold tracking-tighter text-xl nexus-glow">PERF_NEXUS</span>
+          <span className="font-mono font-bold tracking-tighter text-xl nexus-glow">[PERF_STATION]</span>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -165,11 +153,11 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-nexus-text/60 text-lg md:text-xl max-w-2xl font-light leading-relaxed mb-10"
+            className="text-nexus-text/60 text-lg md:text-xl max-w-3xl font-light leading-relaxed mb-10"
           >
-            With 4.5+ years of experience in performance testing and engineering at TCS and Wipro. 
-            Specializing in end-to-end testing, high-concurrency systems, and bottleneck identification 
-            using JMeter, LoadRunner, and New Relic.
+            I believe that "fast" is a feature. With 5+ years of experience across the high-stakes sectors of Banking and Healthcare, I currently ensure athenahealth systems remain resilient and scalable. I don't just execute tests; I architect performance ecosystems.
+            <br /><br />
+            Whether I’m scripting intricate scenarios in JMeter, deep-diving into New Relic telemetry to isolate bottlenecks, or deploying Python-driven automation to eliminate the manual overhead, my objective is singular: Peak Reliability. I thrive at the intersection of performance engineering, proactive monitoring, and intelligent automation.
           </motion.p>
 
           <motion.div 
@@ -234,7 +222,7 @@ const Telemetry = () => {
   return (
     <section id="telemetry" className="py-20 border-b border-white/5">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {STATS.map((stat, idx) => (
             <motion.div 
               key={stat.label}
@@ -242,14 +230,31 @@ const Telemetry = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="glass-card p-6 border-l-2 border-l-nexus-accent/50 group hover:border-l-nexus-accent transition-all"
+              className="relative p-6 border border-white/10 bg-black/40 overflow-hidden group hover:border-nexus-accent/40 transition-all duration-300"
             >
-              <div className="flex justify-between items-start mb-4">
-                <stat.icon className="w-5 h-5 text-nexus-accent/60 group-hover:text-nexus-accent transition-colors" />
-                <span className="text-[10px] font-mono text-nexus-text/30">0{idx + 1}</span>
+              {/* Scanline background */}
+              <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.25)_50%)] bg-[length:100%_4px] opacity-20 group-hover:opacity-40 transition-opacity pointer-events-none" />
+              
+              {/* Top accent line */}
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-nexus-accent/20 group-hover:bg-nexus-accent transition-colors duration-300" />
+
+              <div className="relative z-10 flex flex-col h-full justify-between gap-8">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-sm bg-nexus-accent/50 group-hover:bg-nexus-accent group-hover:shadow-[0_0_8px_rgba(0,255,156,0.6)] transition-all duration-300" />
+                    <stat.icon className="w-4 h-4 text-nexus-text/50 group-hover:text-nexus-accent transition-colors" />
+                  </div>
+                  <span className="text-[10px] font-mono text-nexus-text/30 tracking-widest">SYS.0{idx + 1}</span>
+                </div>
+                
+                <div>
+                  <div className="text-4xl font-mono font-bold text-white mb-2 tracking-tight group-hover:text-nexus-accent transition-colors duration-300">{stat.value}</div>
+                  <div className="text-[10px] font-mono text-nexus-text/40 tracking-widest uppercase flex items-center gap-2">
+                    <span className="w-4 h-[1px] bg-nexus-text/20" />
+                    {stat.label}
+                  </div>
+                </div>
               </div>
-              <div className="text-3xl font-mono font-bold mb-1">{stat.value}</div>
-              <div className="text-[10px] font-mono text-nexus-text/40 tracking-widest uppercase">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -264,8 +269,8 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <h2 className="text-4xl font-bold tracking-tight mb-4">OPTIMIZED_PROJECTS</h2>
-            <p className="text-nexus-text/50 font-mono text-xs uppercase tracking-widest">Case studies in efficiency and scale</p>
+            <h2 className="text-4xl font-bold tracking-tight mb-4">PROJECTS_&_TOOLS</h2>
+            <p className="text-nexus-text/50 font-mono text-xs uppercase tracking-widest">Custom automation utilities and enterprise performance testing</p>
           </div>
           <div className="h-[1px] flex-grow mx-8 bg-white/5 hidden md:block" />
         </div>
@@ -278,7 +283,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="glass-card p-8 flex flex-col group relative overflow-hidden"
+              className="glass-card p-8 flex flex-col group relative overflow-hidden hover:-translate-y-2 transition-all duration-300 border-t-2 border-t-transparent hover:border-t-nexus-accent"
             >
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
                 <Code2 className="w-12 h-12" />
@@ -305,6 +310,19 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
+
+              <div className="flex items-center gap-4 mt-auto pt-4 border-t border-white/5">
+                {project.github && project.github !== '#' && (
+                  <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-mono text-nexus-text/40 hover:text-nexus-accent transition-colors">
+                    <Github className="w-4 h-4" /> SOURCE
+                  </a>
+                )}
+                {project.demo && project.demo !== '#' && (
+                  <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs font-mono text-nexus-text/40 hover:text-nexus-accent transition-colors">
+                    <ExternalLink className="w-4 h-4" /> DEMO
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
@@ -317,61 +335,42 @@ const Resources = () => {
   return (
     <section id="resources" className="py-32 bg-nexus-muted/10">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <h2 className="text-4xl font-bold tracking-tight mb-8">RESOURCE_ALLOCATION</h2>
-            <p className="text-nexus-text/60 mb-12 leading-relaxed">
-              A breakdown of technical proficiency across the performance stack. 
-              Each metric represents real-world application and optimization experience.
-            </p>
-
-            <div className="space-y-8">
-              {SKILLS.map((skill, idx) => (
-                <div key={skill.name} className="space-y-2">
-                  <div className="flex justify-between items-center text-xs font-mono">
-                    <div className="flex items-center gap-2">
-                      <skill.icon className="w-4 h-4 text-nexus-accent" />
-                      <span className="uppercase tracking-widest">{skill.name}</span>
-                    </div>
-                    <span className="text-nexus-accent">{skill.level}%</span>
-                  </div>
-                  <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                    <motion.div 
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1, delay: idx * 0.1 }}
-                      viewport={{ once: true }}
-                      className="h-full bg-nexus-accent shadow-[0_0_10px_rgba(0,255,156,0.5)]"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+            <h2 className="text-4xl font-bold tracking-tight mb-4">TECHNICAL_ARSENAL</h2>
+            <p className="text-nexus-text/50 font-mono text-xs uppercase tracking-widest">Core competencies and technology stack</p>
           </div>
+          <div className="h-[1px] flex-grow mx-8 bg-white/5 hidden md:block" />
+        </div>
 
-          <div className="relative">
-            <div className="aspect-square glass-card p-12 flex items-center justify-center border-nexus-accent/10 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,156,0.1)_0%,transparent_70%)]" />
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-24 h-24 bg-nexus-accent/10 rounded-full flex items-center justify-center mb-6 border border-nexus-accent/20">
-                  <Cpu className="w-12 h-12 text-nexus-accent animate-pulse" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {SKILL_CATEGORIES.map((category, idx) => (
+            <motion.div 
+              key={category.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.1 }}
+              viewport={{ once: true }}
+              className="glass-card p-8 border-t-2 border-t-transparent hover:border-t-nexus-accent transition-all duration-300 group"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-nexus-accent/10 rounded-sm group-hover:bg-nexus-accent/20 transition-colors">
+                  <category.icon className="w-6 h-6 text-nexus-accent" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">SYSTEM_CORE</h3>
-                <p className="text-nexus-text/50 text-sm max-w-xs font-mono">
-                  Optimizing the critical path through deep-level system analysis and hardware-aware software design.
-                </p>
+                <h3 className="text-xl font-bold tracking-tight">{category.title}</h3>
               </div>
-              
-              {/* Decorative elements */}
-              {[...Array(4)].map((_, i) => (
-                <div 
-                  key={i} 
-                  className="absolute w-full h-[1px] bg-nexus-accent/10" 
-                  style={{ top: `${25 * (i + 1)}%`, transform: `rotate(${i * 45}deg)` }} 
-                />
-              ))}
-            </div>
-          </div>
+              <p className="text-nexus-text/60 text-sm mb-6 leading-relaxed min-h-[40px]">
+                {category.description}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map(skill => (
+                  <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/10 text-xs font-mono text-nexus-text/80 rounded-sm group-hover:border-nexus-accent/30 transition-colors">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
@@ -381,7 +380,7 @@ const Resources = () => {
 const TerminalSection = () => {
   const [input, setInput] = useState('');
   const [logs, setLogs] = useState<string[]>([
-    'Initializing Performance Nexus Terminal...',
+    'Initializing Performance Station Terminal...',
     'System: Online',
     'User: Guest_Access',
     'Type "help" for available commands.'
@@ -397,13 +396,13 @@ const TerminalSection = () => {
         response = 'Available commands: about, skills, experience, contact, clear, status';
         break;
       case 'about':
-        response = 'Nagarjuna S - Performance Engineer with 4.5+ years of experience at TCS and Wipro.';
+        response = 'Nagarjuna S - Performance Engineer with 5+ years of experience across Banking and Healthcare domains. Currently at Athenahealth.';
         break;
       case 'skills':
-        response = 'JMeter, LoadRunner, Zabbix, New Relic, AWS Kubernetes, Docker, Linux, Oracle SQL, Java.';
+        response = 'JMeter, LoadRunner, Zabbix, New Relic, Python, Powershell, Bash, Pywinauto, AWS Kubernetes, Docker, Linux, Oracle SQL, Java.';
         break;
       case 'experience':
-        response = 'IT Analyst @ TCS (2023-Present) | Senior Associate @ Wipro (2020-2023).';
+        response = 'MTS-Performance Engineer @ Athenahealth | IT Analyst @ TCS | Senior Associate @ Wipro.';
         break;
       case 'contact':
         response = 'Email: nagarjun835@gmail.com | LinkedIn: linkedin.com/in/nagarjuna835 | Phone: 8971151169';
@@ -434,7 +433,7 @@ const TerminalSection = () => {
                 <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
                 <div className="w-3 h-3 rounded-full bg-green-500/50" />
               </div>
-              <div className="text-[10px] font-mono text-nexus-text/40 uppercase tracking-widest">nexus_terminal_v2.4.0</div>
+              <div className="text-[10px] font-mono text-nexus-text/40 uppercase tracking-widest">perf_station_terminal_v2.4.0</div>
             </div>
             <div className="p-6 h-80 overflow-y-auto font-mono text-xs text-nexus-accent/80 space-y-1 custom-scrollbar">
               {logs.map((log, i) => (
@@ -447,7 +446,6 @@ const TerminalSection = () => {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   className="bg-transparent border-none outline-none flex-grow text-nexus-text"
-                  autoFocus
                 />
               </form>
             </div>

@@ -2,17 +2,9 @@ import {
   Activity, 
   Cpu, 
   Database, 
-  Github, 
-  Globe, 
-  Layers, 
-  Linkedin, 
-  Mail, 
-  Maximize2, 
   Monitor, 
-  Server, 
   Terminal, 
-  Zap,
-  Briefcase
+  Zap
 } from 'lucide-react';
 
 export const NAV_LINKS = [
@@ -23,20 +15,44 @@ export const NAV_LINKS = [
   { name: 'TERMINAL', href: '#terminal' },
 ];
 
-export const SKILLS = [
-  { name: 'Apache JMeter', level: 95, icon: Activity },
-  { name: 'HP LoadRunner', level: 90, icon: Server },
-  { name: 'New Relic & Zabbix', level: 88, icon: Monitor },
-  { name: 'AWS Kubernetes', level: 85, icon: Globe },
-  { name: 'Docker & Linux', level: 85, icon: Layers },
-  { name: 'Oracle SQL & Java', level: 82, icon: Database },
+export const SKILL_CATEGORIES = [
+  {
+    title: 'Performance Testing',
+    icon: Activity,
+    description: 'Designing and executing high-concurrency load, stress, and endurance tests.',
+    skills: ['Apache JMeter', 'HP LoadRunner']
+  },
+  {
+    title: 'Automation & Scripting',
+    icon: Terminal,
+    description: 'Building custom utilities to eliminate manual effort and accelerate analysis.',
+    skills: ['Python', 'Bash', 'PowerShell', 'Pywinauto', 'Java']
+  },
+  {
+    title: 'Monitoring & APM',
+    icon: Monitor,
+    description: 'Deep-dive bottleneck analysis and real-time system telemetry.',
+    skills: ['New Relic', 'Zabbix', 'JProfiler']
+  },
+  {
+    title: 'Infrastructure & Data',
+    icon: Database,
+    description: 'Navigating complex distributed systems and analyzing database performance.',
+    skills: ['AWS', 'Kubernetes', 'Docker', 'Linux', 'Oracle SQL']
+  }
 ];
 
 export const EXPERIENCE = [
   {
+    role: 'MTS-Performance Engineer',
+    company: 'Athenahealth',
+    period: 'PRESENT',
+    description: 'Specializing in test planning, advanced scripting, and bottleneck analysis to ensure systems deliver peak reliability and scalability in the Healthcare domain.'
+  },
+  {
     role: 'IT Analyst',
     company: 'Tata Consultancy Services',
-    period: '2023 - PRESENT',
+    period: '2023 - 2024',
     description: 'Leading performance engineering initiatives, optimizing client/server and web-based applications for high availability and scalability.'
   },
   {
@@ -49,11 +65,20 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
   {
+    title: 'JTL Converter',
+    description: 'A custom automation utility designed to help performance engineers in their day-to-day activities by converting and analyzing JMeter JTL files efficiently.',
+    metrics: { role: 'Creator', type: 'Automation Tool', domain: 'Performance' },
+    tags: ['Python', 'Automation', 'JMeter', 'Data Processing'],
+    github: 'https://github.com/nagarjunas-ai/jtl_converter',
+    demo: 'https://jtl-converter.onrender.com/',
+  },
+  {
     title: 'Personal Finance Management (PFM)',
     description: 'Performance testing for Yodlee Retail Banking Solutions, securely aggregating data from 14,000+ sources. Created test plans, reviewed SQL queries, and generated performance scorecards.',
     metrics: { role: 'Perf Engineer', tools: 'JMeter, SQL', monitoring: 'Zabbix' },
     tags: ['JMeter', 'SQL', 'Zabbix', 'Capacity Planning'],
     github: '#',
+    demo: '#',
   },
   {
     title: 'Enterprise Load Simulation',
@@ -61,19 +86,13 @@ export const PROJECTS = [
     metrics: { load: 'High Concurrency', duration: 'Endurance', type: 'Stress Test' },
     tags: ['LoadRunner', 'JMeter', 'Performance'],
     github: '#',
-  },
-  {
-    title: 'System Bottleneck Resolution',
-    description: 'Monitored essential server performance counters with Zabbix and NewRelic. Identified bottlenecks and collaborated with developers to optimize application performance.',
-    metrics: { monitoring: 'NewRelic', analysis: 'JProfiler', OS: 'Linux' },
-    tags: ['NewRelic', 'JProfiler', 'Linux', 'Docker'],
-    github: '#',
+    demo: '#',
   },
 ];
 
 export const STATS = [
-  { label: 'EXPERIENCE', value: '4.5+ YRS', icon: Briefcase },
-  { label: 'COMPANIES', value: '2', icon: Server },
-  { label: 'TOOLS', value: '10+', icon: Cpu },
-  { label: 'LOCATION', value: 'MYSURU', icon: Globe },
+  { label: 'SYSTEM RUNTIME', value: '5+ YRS', icon: Terminal },
+  { label: 'PEAK_LOAD_CAPACITY', value: '4K+', icon: Activity },
+  { label: 'AUTOMATION_COVERAGE', value: '90%', icon: Cpu },
+  { label: 'P95_LATENCY_GOAL', value: '<200ms', icon: Zap },
 ];
