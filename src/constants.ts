@@ -1,9 +1,9 @@
-import { 
-  Activity, 
-  Cpu, 
-  Database, 
-  Monitor, 
-  Terminal, 
+import {
+  Activity,
+  Cpu,
+  Database,
+  Monitor,
+  Terminal,
   Zap
 } from 'lucide-react';
 
@@ -65,12 +65,12 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
   {
-    title: 'JTL Converter',
+    title: 'JTL Visualizer',
     description: 'A custom automation utility designed to help performance engineers in their day-to-day activities by converting and analyzing JMeter JTL files efficiently.',
     metrics: { role: 'Creator', type: 'Automation Tool', domain: 'Performance' },
     tags: ['Python', 'Automation', 'JMeter', 'Data Processing'],
-    github: 'https://github.com/nagarjunx/jtl_converter',
-    demo: 'https://jtl-converter.onrender.com/',
+    github: 'https://github.com/nagarjunx/JTL_Visualizer',
+    demo: 'https://nagarjunx.github.io/JTL_Visualizer/',
   },
   {
     title: 'Personal Finance Management (PFM)',
