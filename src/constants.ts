@@ -77,8 +77,8 @@ export const PROJECTS = [
     description: 'A custom automation utility designed to help performance engineers in their day-to-day activities by analyzing and visualizing log files efficiently.',
     metrics: { role: 'Creator', type: 'Automation Tool', domain: 'Performance' },
     tags: ['Python', 'Automation', 'Log Analysis', 'Data Processing'],
-    github: 'https://github.com/nagarjunx/log_ninja',
-    demo: 'https://nagarjunx.github.io/log_ninja/',
+    github: 'https://github.com/nagarjunx/logninja',
+    demo: 'https://nagarjunx.github.io/logninja/',
   }
 ];
 
