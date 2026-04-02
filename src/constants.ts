@@ -26,7 +26,7 @@ export const SKILL_CATEGORIES = [
     title: 'Automation & Scripting',
     icon: Terminal,
     description: 'Building custom utilities to eliminate manual effort and accelerate analysis.',
-    skills: ['Python', 'Bash', 'PowerShell', 'Pywinauto', 'Java']
+    skills: ['Python', 'Bash', 'Pywinauto']
   },
   {
     title: 'Monitoring & APM',
@@ -73,21 +73,13 @@ export const PROJECTS = [
     demo: 'https://nagarjunx.github.io/JTL_Visualizer/',
   },
   {
-    title: 'Personal Finance Management (PFM)',
-    description: 'Performance testing for Yodlee Retail Banking Solutions, securely aggregating data from 14,000+ sources. Created test plans, reviewed SQL queries, and generated performance scorecards.',
-    metrics: { role: 'Perf Engineer', tools: 'JMeter, SQL', monitoring: 'Zabbix' },
-    tags: ['JMeter', 'SQL', 'Zabbix', 'Capacity Planning'],
-    github: '#',
-    demo: '#',
-  },
-  {
-    title: 'Enterprise Load Simulation',
-    description: 'Developed robust scripts in Apache JMeter and LoadRunner to emulate realistic user behavior for load, stress, and endurance testing.',
-    metrics: { load: 'High Concurrency', duration: 'Endurance', type: 'Stress Test' },
-    tags: ['LoadRunner', 'JMeter', 'Performance'],
-    github: '#',
-    demo: '#',
-  },
+    title: 'Log File Analyzer',
+    description: 'A custom automation utility designed to help performance engineers in their day-to-day activities by analyzing and visualizing log files efficiently.',
+    metrics: { role: 'Creator', type: 'Automation Tool', domain: 'Performance' },
+    tags: ['Python', 'Automation', 'Log Analysis', 'Data Processing'],
+    github: 'https://github.com/nagarjunx/log_ninja',
+    demo: 'https://nagarjunx.github.io/log_ninja/',
+  }
 ];
 
 export const STATS = [

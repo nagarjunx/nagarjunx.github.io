@@ -399,7 +399,7 @@ const TerminalSection = () => {
         response = 'Nagarjuna S - Performance Engineer with 5+ years of experience across Banking and Healthcare domains. Currently at Athenahealth.';
         break;
       case 'skills':
-        response = 'JMeter, LoadRunner, Zabbix, New Relic, Python, Powershell, Bash, Pywinauto, AWS Kubernetes, Docker, Linux, Oracle SQL, Java.';
+        response = 'JMeter, LoadRunner, Zabbix, New Relic, Python, Bash, Pywinauto, AWS Kubernetes, Docker, Linux, Oracle SQL.';
         break;
       case 'experience':
         response = 'MTS-Performance Engineer @ Athenahealth | IT Analyst-Performance Engineer @ TCS | Senior Associate-Performance Engineer @ Wipro.';
