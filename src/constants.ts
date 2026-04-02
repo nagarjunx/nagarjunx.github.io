@@ -69,8 +69,8 @@ export const PROJECTS = [
     description: 'A custom automation utility designed to help performance engineers in their day-to-day activities by converting and analyzing JMeter JTL files efficiently.',
     metrics: { role: 'Creator', type: 'Automation Tool', domain: 'Performance' },
     tags: ['Python', 'Automation', 'JMeter', 'Data Processing'],
-    github: 'https://github.com/nagarjunx/JTL_Visualizer',
-    demo: 'https://nagarjunx.github.io/JTL_Visualizer/',
+    github: 'https://github.com/nagarjunx/jtl_visualizer',
+    demo: 'https://nagarjunx.github.io/jtl_visualizer/',
   },
   {
     title: 'Log File Analyzer',
